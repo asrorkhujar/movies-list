@@ -137,3 +137,12 @@
 body {
   font-family:"Dosis", "Arial Narrow", Arial, sans-serif ;
 }
+
+.movie {
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.movie:hover {
+  box-shadow: 0px 0px 5px 5px rgba(255, 255, 255, 0.7);
+}
