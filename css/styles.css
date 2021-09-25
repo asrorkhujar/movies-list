@@ -1,90 +1,139 @@
-.telegram-chat .dropdown-toggle::after {
-  display: none;
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis-Bold.woff2") format("woff2"),
+      url("Dosis-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* CHATS-LIST */
-/* CHATS-ITEM */
-.chats__item.active .text-primary {
-  color: #fff !important;
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis-ExtraBold.woff2") format("woff2"),
+      url("Dosis-ExtraBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
 }
 
-.chats__item.active .badge-primary {
-  background-color: #fff;
-  color: var(--primary);
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis-ExtraLight.woff2") format("woff2"),
+      url("Dosis-ExtraLight.woff") format("woff");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
-.chats__item.active svg {
-  fill: #fff;
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis-Light.woff2") format("woff2"),
+      url("Dosis-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis-Medium.woff2") format("woff2"),
+      url("Dosis-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis-Regular.woff2") format("woff2"),
+      url("Dosis-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Dosis";
+  src: url("/fonts/Dosis-SemiBold.woff2") format("woff2"),
+      url("Dosis-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin-Bold.woff2") format("woff2"),
+      url("Cabin-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin-BoldItalic.woff2") format("woff2"),
+      url("Cabin-BoldItalic.woff") format("woff");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin-Italic.woff2") format("woff2"),
+      url("Cabin-Italic.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin-Medium.woff2") format("woff2"),
+      url("Cabin-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin-MediumItalic.woff2") format("woff2"),
+      url("Cabin-MediumItalic.woff") format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin-Regular.woff2") format("woff2"),
+      url("Cabin-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin-SemiBoldItalic.woff2") format("woff2"),
+      url("Cabin-SemiBoldItalic.woff") format("woff");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Cabin";
+  src: url("/fonts/Cabin-SemiBold.woff2") format("woff2"),
+      url("Cabin-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
 }
 
 
-/* CHAT */
-.chat__header-info-button {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  padding: 0;
-  border: 0;
-  overflow: hidden;
-}
-
-
-/* SIDEBAR-MODAL */
-.sidebar-modal {
-  padding-left: 0 !important;
-}
-
-.sidebar-modal.fade .sidebar-modal__modal-dialog {
-  margin: 0;
-  transform: translateX(-100%);
-}
-
-.sidebar-modal.show .sidebar-modal__modal-dialog {
-  transform: translateX(0);
-}
-
-.sidebar-modal__expand-icon {
-  transition: transform 0.4s ease;
-}
-
-.sidebar-modal__expand-icon--open {
-  transform: rotate(180deg);
-}
-
-
-/* ACTIONS-LIST */
-.actions-list__item,
-.actions-list__item .stretched-link {
-  cursor: pointer;
-}
-
-
-/* LOCK-MODAL */
-.lock-modal {
-  padding-left: 0 !important;
-}
-
-.lock-modal__modal-dialog {
-  max-width: 100%;
-  margin: 0;
-}
-
-.lock-modal__password-input {
-  border: 0;
-  border-bottom: 3px solid var(--primary);
-}
-
-@media (min-width: 768px) {
-  /* SIDEBAR-MODAL */
-  .sidebar-modal__modal-dialog {
-    max-width: 41.666667%;
-  }
-}
-
-
-@media (min-width: 992px) {
-  /* SIDEBAR-MODAL */
-  .sidebar-modal__modal-dialog {
-    max-width: 25%;
-  }
+body {
+  font-family:"Dosis", "Arial Narrow", Arial, sans-serif ;
 }

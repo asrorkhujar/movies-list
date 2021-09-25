@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Movies</title>
   <link rel="stylesheet" href="css/bootstrap5.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
   <style>
     .movie__img {
       object-fit: cover;
@@ -46,14 +48,14 @@
           <select class="form-control js-sort-select" name="sort" aria-label="Sorting">
             <option value="az">A-Z</option>
             <option value="za">Z-A</option>
-            <option value="rating_asc">Rating low-high</option>
-            <option value="rating_desc">Rating high-low</option>
+            <option value="rating_asc">Rating ▲</option>
+            <option value="rating_desc">Rating ▼</option>
             <option value="year_asc">Year (old-new)</option>
             <option value="year_desc">Year (new-old)</option>
           </select>
         </div>
         <div class="col-md-1">
-          <button class="btn btn-primary" type="submit">Search</button>
+          <button class="btn btn-info text-white" type="submit">Search</button>
         </div>
         <div class="col-md-3">
           <button class="btn btn-success js-watch-list-button mt-3" type="button" data-bs-toggle="modal"
@@ -61,26 +63,26 @@
         </div>
       </form>
 
+      <div class="movies__list row">
+        <p class="text-center">Movies are coming... Please, wait.</p>
+      </div>
+
       <!-- PAGINATION -->
       <div class="d-flex flex-wrap justify-content-center mb-3 js-pagination">
         <div class="page-item">
-          <a class="page-link js-pagination-start" href="#">Start</a>
+          <a class="page-link js-pagination-start" href="#">«</a>
         </div>
         <div class="page-item">
-          <a class="page-link js-pagination-prev" href="#">Prev</a>
+          <a class="page-link js-pagination-prev" href="#">‹</a>
         </div>
         <ul class="pagination order-first col-12 justify-content-center mb-2 js-pagination-list">
         </ul>
         <div class="page-item">
-          <a class="page-link js-pagination-next" href="#">Next</a>
+          <a class="page-link js-pagination-next" href="#">›</a>
         </div>
         <div class="page-item">
-          <a class="page-link js-pagination-end" href="#">End</a>
+          <a class="page-link js-pagination-end" href="#">»</a>
         </div>
-      </div>
-
-      <div class="movies__list row">
-        <p class="text-center">Movies are coming... Please, wait.</p>
       </div>
     </section>
 

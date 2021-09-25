@@ -4,7 +4,7 @@ const watchList = JSON.parse(localStorage.getItem('watchlist')) || [];
 
 // PAGINATION
 let TOTAL_RESULTS = 10;
-let PER_PAGE_COUNT = 10;
+let PER_PAGE_COUNT = 18;
 let PAGE_LINKS_TO_SHOW = 5; // only odd numbers
 let NEIGHBOUR_PAGES_COUNT = Math.floor(PAGE_LINKS_TO_SHOW / 2);
 let CURRENT_PAGE = 1;
@@ -19,77 +19,6 @@ const elGenresSelect = elMovieSearchForm.querySelector('select');
 const elMinYearInput = elMovieSearchForm.querySelector('.js-start-year-input');
 const elMaxYearInput = elMovieSearchForm.querySelector('.js-end-year-input');
 const elSortSelect = elMovieSearchForm.querySelector('.js-sort-select');
-
-
-//PAGINATION-console
-/* const TOTAL_PAGES = 20;
-const CURRENT_PAGE = 1;
-const NEIGHBOUR_PAGESLINKS_COUNT = 3;
-
-function displayPagination() {
-  for (var i = CURRENT_PAGE - NEIGHBOUR_PAGESLINKS_COUNT; i <= CURRENT_PAGE + NEIGHBOUR_PAGESLINKS_COUNT; i++) {
-    if (i < 1) {
-      continue;
-    }
-
-    if (i > TOTAL_PAGES) {
-      break;
-    }
-
-    if (i === CURRENT_PAGE) {
-      console.log(i + ' active');
-    } else {
-      console.log(i);
-    }
-  }
-}
-
-function goToPage(pageNumber) {
-  if (pageNumber < 1) {
-    pageNumber = 1;
-  } else if (pageNumber > TOTAL_PAGES) {
-    pageNumber = TOTAL_PAGES;
-  }
-  CURRENT_PAGE = pageNumber;
-  displayPagination();
-}
-
-function goToNextPage() {
- CURRENT_PAGE++;
- goToNextPage(CURRENT_PAGE);
-}
-
-function goToPreviousPage() {
- CURRENT_PAGE--;
- goToPreviousPage(CURRENT_PAGE);
-}
-
-function goToLastPage() {
- CURRENT_PAGE = TOTAL_PAGES;
- goToPage(CURRENT_PAGE);
-}
-
-function goToFirstPage() {
- CURRENT_PAGE = 1;
- goToPage(CURRENT_PAGE);
-}
-
-const elPagination = document.querySelector('.js-prev-page-link');
-const elPrevPageLink = document.querySelector('.pagination');
-const elNextPageLink = document.querySelector('.js-next-page-link');
-
-function onPrevPageLinkClick() {
-  goToPreviousPage();
-}
-function onNextPageLinkClick() {
-  goToNextPage();
-}
-
-elPrevPageLink.addEventListener('click', onPrevPageLinkClick);
-elNextPageLink.addEventListener('click', onNextPageLinkClick);
-
-displayPagination(); */
-
 
 // RESULT
 const elMoviesList = document.querySelector('.movies__list');
@@ -129,7 +58,7 @@ function showWatchlist() {
   for (let watchItem of watchList) {
     let newBookmark = `<li class="bookmark watchlist-modal__item list-group-item d-flex align-items-center justify-content-between" data-unique-id="${watchItem.imdbId}">
     <h3 class="bookmark__title h5">${watchItem.title} (${watchItem.year})</h3>
-    <button class="bookmark__remove btn btn-danger btn-sm text-white" type="button" title="Remove from watchlist">&#10006;</button>
+    <button class="bookmark__remove btn btn-danger btn-sm text-white" type="button" title="Remove from watchlist" data-unique-id="${watchItem.title}">&#10006;</button>
     </li>`;
     elWatchListALL.insertAdjacentHTML('beforeend', newBookmark)
   }
