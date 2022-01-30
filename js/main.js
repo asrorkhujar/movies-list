@@ -58,7 +58,7 @@ function showWatchlist() {
   for (let watchItem of watchList) {
     let newBookmark = `<li class="bookmark watchlist-modal__item list-group-item d-flex align-items-center justify-content-between" data-unique-id="${watchItem.imdbId}">
     <h3 class="bookmark__title h5">${watchItem.title} (${watchItem.year})</h3>
-    <button class="bookmark__remove btn btn-danger btn-sm text-white" type="button" title="Remove from watchlist" data-unique-id="${watchItem.title}">&#10006;</button>
+    <button class="bookmark__remove btn btn-danger btn-sm text-white" type="button" title="Remove from watchlist" data-unique-id="${watchItem.imdbId}">&#10006;</button>
     </li>`;
     elWatchListALL.insertAdjacentHTML('beforeend', newBookmark)
   }
